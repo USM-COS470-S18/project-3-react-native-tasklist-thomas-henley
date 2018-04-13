@@ -16,7 +16,13 @@ class TaskEdit extends Component {
 
   onButtonPress() {
     const { name, description, complete } = this.props;
-    this.props.taskSave({ name, description, complete, uid: this.props.task.item.key });
+    this.props.taskSave({
+      name,
+      description,
+      complete,
+      uid: this.props.task.item.key,
+      inMenu: true
+    });
   }
 
   onDeletePress() {

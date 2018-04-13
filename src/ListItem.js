@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, TouchableWithoutFeedback, View } from 'react-native';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
-import { taskUpdate } from './actions';
+import { taskSwitch } from './actions';
 import { CardSection, Switcher } from './common';
 
 class ListItem extends Component {
@@ -30,7 +30,12 @@ class ListItem extends Component {
                   value={complete}
                   onValueChange={newValue => {
                     console.log('click');
-                    this.props.taskUpdate({ prop: 'complete', value: newValue });
+                    this.props.taskSwitch({
+                      name,
+                      description,
+                      complete: newValue,
+                      uid: this.props.task.item.key
+                    });
                   }}
                 />
               </View>
@@ -62,4 +67,4 @@ const styles = {
   }
 };
 
-export default connect(mapStateToProps, { taskUpdate })(ListItem);
+export default connect(mapStateToProps, { taskSwitch })(ListItem);

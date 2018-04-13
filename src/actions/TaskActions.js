@@ -50,6 +50,19 @@ export const taskSave = ({ name, description, complete, uid }) => {
   };
 };
 
+export const taskSwitch = ({ name, description, complete, uid }) => {
+  console.log(complete, uid);
+
+  const { currentUser } = firebase.auth();
+  return () => {
+    firebase
+      .database()
+      .ref(`/users/${currentUser.uid}/tasks/${uid}`)
+      .set({ name, description, complete })
+      .then(() => {});
+  };
+};
+
 export const taskDelete = ({ uid }) => {
   const { currentUser } = firebase.auth();
 
