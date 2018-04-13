@@ -15,7 +15,5 @@ password: password
 
 The App uses Redux for maintaining state, React-Native-Router-Flux for navigation, Redux Thunk middleware for some asynchronous dispatch functionality, Firebase for user authentication and data storage, and Lodash to deal with some of Redux's finer idiosynchrocies.
 
-Note: the checkbox feature on the List screen is currently buggy. It correctly shows whether the task is complete or not, but does not respond to touch.
-
 REFLECTIONS:
 React is a mighty beast. Through the process of building this app (which I needlessly made more complicated), it became very apparent how React-Native offers some incredible modularity and flexibility while also being finnicky, untamed, and sometimes a bit janky. Using Node to install packages as needed is a new experience for me, and I like the variety it adds, but many common packages use features that have been deprecated already. Even some React-Native libraries use deprecated markers like "componentWillMount." I'm sure experience will render these little issues moot, but as a fledgling developer it can be confusing to try to work with so many moving pieces and thousands of warnings through the debugging process.
