@@ -1,5 +1,6 @@
-Project 3
+COS 470 Project 3
 Tasks
+Thomas Henley
 
 USE:
 This is a simple tasklist application. The user logs in with email and password and the app pulls their tasklist from the data stored on Firebase. The user can click the "Add" button in the corner to create a new task, or click on any currently existing task to edit or delete it.
@@ -12,7 +13,7 @@ password: thomas
 email: houser@maine.edu
 password: password
 
-The App uses Redux for maintaining state, React-Native-Router-Flux for navigation, Redux Thunk middleware for some asynchronous dispatch functionality, Firebase for user authentication and data storage, and Lodash to deal with some of Redux's finer idiosynchrocies. 
+The App uses Redux for maintaining state, React-Native-Router-Flux for navigation, Redux Thunk middleware for some asynchronous dispatch functionality, Firebase for user authentication and data storage, and Lodash to deal with some of Redux's finer idiosynchrocies.
 
 Note: the checkbox feature on the List screen is currently buggy. It correctly shows whether the task is complete or not, but does not respond to touch.
 
